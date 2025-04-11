@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	color: #333;
+	font-size: 14px;
+	background-image: linear-gradient(to right top, #8bd090, #6ad3ae, #53d3cb, #55d0e2, #70cbf0);
+}
+.projcard-container {
+	margin: 50px 0;
+}
+
+
+.projcard-container,
+.projcard-container * {
+	box-sizing: border-box;
+}
+.projcard-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+.projcard {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	font-size: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+	box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+	transform: translate(0px, -3px);
+}
+.projcard::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: linear-gradient(-70deg, #424242, transparent 50%);
+	opacity: 0.07;
+}
+.projcard:nth-child(2n)::before {
+	background-image: linear-gradient(-250deg, #424242, transparent 50%);
+}
+.projcard-innerbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.projcard-img {
+	position: absolute;
+	height: 300px;
+	width: 400px;
+	top: 0;
+	left: 0;
+	transition: transform 0.2s ease;
+}
+.projcard:nth-child(2n) .projcard-img {
+	left: initial;
+	right: 0;
+}
+.projcard:hover .projcard-img {
+	transform: scale(1.05) rotate(1deg);
+}
+.projcard:hover .projcard-bar {
+	width: 70px;
+}
+.projcard-textbox {
+	position: absolute;
+	top: 7%;
+	bottom: 7%;
+	left: 430px;
+	width: calc(100% - 470px);
+	font-size: 17px;
+}
+.projcard:nth-child(2n) .projcard-textbox {
+	left: initial;
+	right: 430px;
+}
+.projcard-textbox::before,
+.projcard-textbox::after {
+	content: "";
+	position: absolute;
+	display: block;
+	background: #ff0000bb;
+	background: #fff;
+	top: -20%;
+	left: -55px;
+	height: 140%;
+	width: 60px;
+	transform: rotate(8deg);
+}
+.projcard:nth-child(2n) .projcard-textbox::before {
+	display: none;
+}
+.projcard-textbox::after {
+	display: none;
+	left: initial;
+	right: -55px;
+}
+.projcard:nth-child(2n) .projcard-textbox::after {
+	display: block;
+}
+.projcard-textbox * {
+	position: relative;
+}
+.projcard-title {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	font-size: 24px;
+}
+.projcard-subtitle {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	color: #888;
+}
+.projcard-bar {
+	left: -2px;
+	width: 50px;
+	height: 5px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #424242;
+	transition: width 0.2s ease;
+}
+
+.projcard-tagbox {
+	position: absolute;
+	bottom: 3%;
+	font-size: 14px;
+	cursor: default;
+	user-select: none;
+	pointer-events: none;
+}
+.projcard-tag {
+	display: inline-block;
+	background: #E0E0E0;
+	color: #777;
+	border-radius: 3px 0 0 3px;
+	line-height: 26px;
+	padding: 0 10px 0 23px;
+	position: relative;
+	margin-right: 20px;
+	cursor: default;
+	user-select: none;
+	transition: color 0.2s;
+}
+.projcard-tag::before {
+	content: '';
+	position: absolute;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+	height: 6px;
+	left: 10px;
+	width: 6px;
+	top: 10px;
+}
+.projcard-tag::after {
+	content: '';
+	position: absolute;
+	border-bottom: 13px solid transparent;
+	border-left: 10px solid #E0E0E0;
+	border-top: 13px solid transparent;
+	right: -10px;
+	top: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="projcard-container">
+		
+        <div class="projcard projcard-blue">
+            <div class="projcard-innerbox">
+    <a href="bmi2.html">      	<img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\pharmacy.jpg" /></a>
+                <div class="projcard-textbox">
+                    <div class="projcard-title">PHARMACY</div>
+                    <div class="projcard-subtitle">better health starts with right skincare</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">we are dedicated to providing high-quality medications and health products to support your well-being. Our team of experienced pharmacists is here to offer personalized care, guiding you with expert advice and tailored treatment options. We offer a wide range of prescription medications, over-the-counter products, and wellness essentials to meet your health needs. Your safety and health are our top priorities, and we ensure that every product we provide meets the highest standards. Whether you're managing a chronic condition or simply looking for health advice.<div class="projcard-tagbox">
+            t.</div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-red">
+            <div class="projcard-innerbox">
+        <a href="nutri.html"   >    <img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\skincare.jpg" /></a>
+                <div class="projcard-textbox">
+                    <div class="projcard-title">SKINCARE</div>
+                    <div class="projcard-subtitle">Find your perfect skincare match.✨</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">we offer a wide range of skincare and makeup products designed to enhance your natural beauty and boost your confidence. From nourishing skincare essentials that hydrate and rejuvenate your skin to high-quality makeup that gives you a flawless finish, we have everything you need to look and feel your best. Our carefully curated selection includes top brands and trusted products, ensuring that your skin receives the care it deserves. Whether you're looking for a new skincare routine or the perfect makeup for any occasion, Glow & Heal has you covered with products that are gentle, effective, and stylish. 🌿📊</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="projcard projcard-green">
+            <div class="projcard-innerbox">
+           <a href="recipe.html"><img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\pet care.jpeg" /></a>
+                <div class="projcard-textbox">
+                    <div class="projcard-title">PETCARE & OTHER ESSENTIALS</div>
+                    <div class="projcard-subtitle">find the best items for your pet and other essentials</div>
+                    <div class="projcard-bar"></div>
+                    <div class="projcard-description">we bring you a curated selection of products that cater to your beauty, wellness, and lifestyle needs. From skincare essentials and makeup must-haves to unique gifts, we offer quality items to enhance your daily routine. Our goal is to provide you with the best shopping experience, offering products that are not only effective but also a joy to use. Discover your new favorites today and let Glow & Heal be your go-to store for all things beauty and wellness.	</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
