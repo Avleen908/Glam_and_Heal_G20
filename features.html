@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Document</title>
 
 	<div>
@@ -242,3 +243,344 @@ body {
     </div>
 </body>
 </html>
+=======
+    <title>Glam & Heal</title>
+    <!-- Link to Google Fonts for Rubik font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define CSS Variables */
+        :root {
+            --primary-color: #f1eee9;
+            --secondary-color: #f9d678;
+            --tertiary-color: #d0dfa4;
+            --text-light: #000000; /* Black text */
+            --white: #ffffff;
+            --max-width: 1200px;
+            --header-font: "Rubik", sans-serif;
+            --header-lavender:  rgb(193, 159, 190) 0%; /* Darker lavender for the header */
+            --page-lavender:  white; /* Original lavender color for the rest of the page */
+        }
+
+        /* Base Styling */
+        body {
+            font-family: var(--header-font); /* Using Rubik font */
+            color: var(--text-light);
+            font-size: 14px;
+            background-color: var(--page-lavender); /* Apply original lavender for the page */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Horizontal Header Navigation */
+        nav {
+            background: var(--header-lavender); /* Apply darker lavender background to the header */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-family: var(--header-font);
+            font-size: 28px;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        nav a {
+            font-family: var(--header-font);
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--header-lavender); /* Hover color changed to darker lavender */
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            font-size: 26px;
+            color: var(--text-light);
+            margin: 40px 0 20px;
+            font-family: var(--header-font);
+        }
+
+        /* Card Styles */
+        .projcard-container {
+            margin: 20px 0;
+        }
+
+        .projcard-container,
+        .projcard-container * {
+            box-sizing: border-box;
+        }
+
+        .projcard-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: var(--max-width); /* Limit width based on max-width variable */
+        }
+
+        .projcard {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            background-color: var(--white);
+            border: 2px solid #ddd;
+            font-size: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+        }
+
+        .projcard:hover {
+            box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+            transform: translate(0px, -3px);
+        }
+
+        .projcard::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(-70deg, var(--page-lavender), transparent 50%); /* Apply original lavender */
+            opacity: 0.07;
+        }
+
+        .projcard:nth-child(2n)::before {
+            background-image: linear-gradient(-250deg, var(--page-lavender), transparent 50%); /* Apply original lavender */
+        }
+
+        .projcard-innerbox {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .projcard-img {
+            position: absolute;
+            height: 300px;
+            width: 400px;
+            top: 0;
+            left: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .projcard:nth-child(2n) .projcard-img {
+            left: initial;
+            right: 0;
+        }
+
+        .projcard:hover .projcard-img {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        .projcard:hover .projcard-bar {
+            width: 70px;
+        }
+
+        .projcard-textbox {
+            position: absolute;
+            top: 7%;
+            bottom: 7%;
+            left: 430px;
+            width: calc(100% - 470px);
+            font-size: 17px;
+        }
+
+        .projcard:nth-child(2n) .projcard-textbox {
+            left: initial;
+            right: 430px;
+        }
+
+        .projcard-textbox::before,
+        .projcard-textbox::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background: var(--page-lavender); /* Apply original lavender */
+            top: -20%;
+            left: -55px;
+            height: 140%;
+            width: 60px;
+            transform: rotate(8deg);
+        }
+
+        .projcard:nth-child(2n) .projcard-textbox::before {
+            display: none;
+        }
+
+        .projcard-textbox::after {
+            display: none;
+            left: initial;
+            right: -55px;
+        }
+
+        .projcard:nth-child(2n) .projcard-textbox::after {
+            display: block;
+        }
+
+        .projcard-textbox * {
+            position: relative;
+        }
+
+        .projcard-title {
+            font-family: var(--header-font);
+            font-size: 24px;
+        }
+
+        .projcard-subtitle {
+            font-family: var(--header-font);
+            color: #888;
+        }
+
+        .projcard-bar {
+            left: -2px;
+            width: 50px;
+            height: 5px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: var(--page-lavender); /* Apply original lavender */
+            transition: width 0.2s ease;
+        }
+
+        .projcard-tagbox {
+            position: absolute;
+            bottom: 3%;
+            font-size: 14px;
+            cursor: default;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .projcard-tag {
+            display: inline-block;
+            background: #E0E0E0;
+            color: #777;
+            border-radius: 3px 0 0 3px;
+            line-height: 26px;
+            padding: 0 10px 0 23px;
+            position: relative;
+            margin-right: 20px;
+            cursor: default;
+            user-select: none;
+            transition: color 0.2s;
+        }
+
+        .projcard-tag::before {
+            content: '';
+            position: absolute;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+            height: 6px;
+            left: 10px;
+            width: 6px;
+            top: 10px;
+        }
+
+        .projcard-tag::after {
+            content: '';
+            position: absolute;
+            border-bottom: 13px solid transparent;
+            border-left: 10px solid #E0E0E0;
+            border-top: 13px solid transparent;
+            right: -10px;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Horizontal Navigation -->
+<nav>
+    <a href="#" class="logo">Glam & Heal</a>
+    <a href="#pharmacy">Pharmacy</a>
+    <a href="#skincare">Skincare</a>
+    <a href="#petcare">Petcare</a>
+    <a href="#essentials">Other Essentials</a>
+</nav>
+
+<!-- Pharmacy Section -->
+<h2 id="pharmacy" class="section-title">Pharmacy</h2>
+<div class="projcard-container">
+    <div class="projcard">
+        <div class="projcard-innerbox">
+            <a href="bmi2.html"><img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\pharmacy.jpg" /></a>
+            <div class="projcard-textbox">
+                <div class="projcard-title">PHARMACY</div>
+                <div class="projcard-subtitle">Better health starts with right skincare</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">We are dedicated to providing high-quality medications and health products to support your well-being. Our team of experienced pharmacists is here to offer personalized care, guiding you with expert advice and tailored treatment options.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Skincare Section -->
+<h2 id="skincare" class="section-title">Skincare</h2>
+<div class="projcard-container">
+    <div class="projcard">
+        <div class="projcard-innerbox">
+            <a href="nutri.html"><img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\skincare.jpg" /></a>
+            <div class="projcard-textbox">
+                <div class="projcard-title">SKINCARE</div>
+                <div class="projcard-subtitle">Find your perfect skincare match. ✨</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">We offer a wide range of skincare and makeup products designed to enhance your natural beauty and boost your confidence. From nourishing skincare essentials to high-quality makeup that gives you a flawless finish.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Petcare Section -->
+<h2 id="petcare" class="section-title">Petcare</h2>
+<div class="projcard-container">
+    <div class="projcard">
+        <div class="projcard-innerbox">
+            <a href="recipe.html"><img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\pet care.jpeg" /></a>
+            <div class="projcard-textbox">
+                <div class="projcard-title">PETCARE</div>
+                <div class="projcard-subtitle">Because your furry friends deserve the best!</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">We bring you carefully selected pet products and essentials to make sure your beloved companions are happy, healthy, and cared for!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Other Essentials Section -->
+<h2 id="essentials" class="section-title">Other Essentials</h2>
+<div class="projcard-container">
+    <div class="projcard">
+        <div class="projcard-innerbox">
+            <a href="#"><img class="projcard-img" src="c:\Users\tanvi\OneDrive\Documents\other.jpg" /></a>
+            <div class="projcard-textbox">
+                <div class="projcard-title">OTHER ESSENTIALS</div>
+                <div class="projcard-subtitle">Daily products you can’t live without</div>
+                <div class="projcard-bar"></div>
+                <div class="projcard-description">Explore a curated collection of everyday essentials from wellness to lifestyle, all in one place. Glam & Heal helps simplify your life!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+>>>>>>> 9a6933f5c7b46d808a00372dd24efebb8163173c
