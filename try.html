@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swapping Effect Example</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Basic styling for the swapping effect container */
+        .swap-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            border: 2px solid #ddd;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        /* Make sure both elements inside the container are absolutely positioned */
+        .swap-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        .swap-container:hover .swap-content {
+            opacity: 1;
+        }
+
+        /* Make the first content visible by default */
+        .swap-content-first {
+            opacity: 1;
+        }
+
+        .swap-container:hover .swap-content-first {
+            opacity: 0;
+        }
+
+        /* Styling the swapped content */
+        .swap-content-second {
+            background: #2196F3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .swap-content-first {
+            background: #4CAF50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <h1 class="my-4">Swapping Effect Example</h1>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <!-- Swapping Effect Box -->
+                <div class="swap-container">
+                    <!-- First content (Image or Text) -->
+                    <div class="swap-content swap-content-first">
+                        <p>Image 1 / Text 1</p>
+                    </div>
+                    <!-- Second content (Image or Text) -->
+                    <div class="swap-content swap-content-second">
+                        <p>Image 2 / Text 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
