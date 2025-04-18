@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e6e6fa, #d8bfd8, #231753, #598699, #606f85);
+    background-size: 400% 400%;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientFlow 15s ease infinite;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Glowing Stars Layer */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: transparent;
+    z-index: -1; /* Places the stars behind content */
+    pointer-events: none;
+    box-shadow:
+        100px 200px 5px 2px rgba(255, 255, 255, 0.8),
+        150px 300px 8px 2px rgba(255, 255, 255, 0.9),
+        200px 400px 6px 2px rgba(255, 255, 255, 0.9),
+        300px 500px 7px 3px rgba(255, 255, 255, 0.9),
+        500px 600px 5px 3px rgba(255, 255, 255, 0.8),
+        600px 100px 7px 2px rgba(255, 255, 255, 0.9),
+        700px 200px 6px 3px rgba(255, 255, 255, 0.9),
+        800px 300px 9px 3px rgba(255, 255, 255, 1),
+        900px 400px 6px 2px rgba(255, 255, 255, 0.7);
+    animation: starTwinkle 3s infinite ease-in-out alternate;
+}
+
+/* Twinkle Animation for Stars */
+@keyframes starTwinkle {
+    0% {
+        box-shadow:
+            100px 200px 5px 2px rgba(255, 255, 255, 0.4),
+            150px 300px 8px 2px rgba(255, 255, 255, 0.5),
+            200px 400px 6px 2px rgba(255, 255, 255, 0.6),
+            300px 500px 7px 3px rgba(255, 255, 255, 0.7),
+            500px 600px 5px 3px rgba(255, 255, 255, 0.4),
+            600px 100px 7px 2px rgba(255, 255, 255, 0.5),
+            700px 200px 6px 3px rgba(255, 255, 255, 0.6),
+            800px 300px 9px 3px rgba(255, 255, 255, 0.7),
+            900px 400px 6px 2px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        box-shadow:
+            100px 200px 5px 2px rgba(255, 255, 255, 1),
+            150px 300px 8px 2px rgba(255, 255, 255, 1),
+            200px 400px 6px 2px rgba(255, 255, 255, 1),
+            300px 500px 7px 3px rgba(255, 255, 255, 1),
+            500px 600px 5px 3px rgba(255, 255, 255, 1),
+            600px 100px 7px 2px rgba(255, 255, 255, 1),
+            700px 200px 6px 3px rgba(255, 255, 255, 1),
+            800px 300px 9px 3px rgba(255, 255, 255, 1),
+            900px 400px 6px 2px rgba(255, 255, 255, 1);
+    }
+}
+
+.payment-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 60px;
+    border-radius: 30px;
+    box-shadow: 0 0 40px rgba(102, 138, 156, 0.4);
+    text-align: center;
+    animation: fadeIn 1.5s ease, floatSoft 8s ease-in-out infinite;
+    width: 100%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+h1.title {
+    color: #18041f;
+    margin-bottom: 12px;
+    font-size: 2.2rem;
+    animation: popUp 1s ease forwards, sparklePulse 2s infinite alternate;
+}
+
+p.subtitle {
+    color: #687a85;
+    margin-bottom: 25px;
+    animation: fadeIn 2s ease forwards;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    animation: fadeIn 2.5s ease forwards;
+}
+
+.payment-form label {
+    text-align: left;
+    color: #151a1b;
+    font-weight: bold;
+}
+
+.payment-form input {
+    padding: 12px;
+    border: 2px solid #aaeff9;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.payment-form input:focus {
+    border-color: #8a9aa0;
+    box-shadow: 0 0 12px #a0dadd;
+}
+
+.pay-btn {
+    background-color: #8e90a6;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.4s ease;
+    animation: buttonGlow 3s ease-in-out infinite, fadeIn 2s ease forwards;
+}
+
+.pay-btn:hover {
+    background-color: #5a6f77;
+    transform: scale(1.07);
+}
+
+p.footer-line {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #dac5e4;
+    animation: fadeIn 3s ease forwards;
+}
+
+/* Animations */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popUp {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes sparklePulse {
+    0% {
+        text-shadow: 0 0 5px #f3d9ff, 0 0 10px #e6ccff;
+        transform: scale(1);
+    }
+    100% {
+        text-shadow: 0 0 20px #ffb3ff, 0 0 40px #d76aff;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes buttonGlow {
+    0% {
+        box-shadow: 0 0 10px #92d8db, 0 0 20px #ccf5ff;
+    }
+    50% {
+        box-shadow: 0 0 20px #7ca1c4, 0 0 30px #6989a4;
+    }
+    100% {
+        box-shadow: 0 0 10px #51616c, 0 0 20px #7a96a8;
+    }
+}
+
+@keyframes floatSoft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
