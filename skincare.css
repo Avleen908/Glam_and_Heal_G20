@@ -17,14 +17,14 @@ body{
   width: 100%;
   padding: 90px 0;
   background: #fff;
-  background-image: linear-gradient(to right top, #f3d4ef, #d1b0f3, #f2f4f7, #f8f9fa, #dcc1e4);
+  background-image: linear-gradient(to right top, #f0a6d9, #d1b0f3, #a6bcff, #78c7ff, #55cef0);
 
 }
 .pic {
   height: 400px;
   width: 450px;
   border-radius: 12px;
-  box-shadow: 10px 10px 5px rgb(183, 154, 180);
+  box-shadow: 10px 10px 5px rgb( 99,145,141);
 }
 .about {
   width: 1130px;
@@ -38,13 +38,13 @@ body{
   width: 540px;
 }
 .text h2 {
-  color: #333;
+  color: #6a93a5;
   font-size: 90px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 .text h5 {
-  color: #333;
+  color: #7096a4;
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -53,7 +53,7 @@ span {
   color: #4070f4;
 }
 .text p {
-  color: #333;
+  color: #68848c;
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 1px;
@@ -72,7 +72,7 @@ span {
   transition: 0.5s;
 }
 .hire:hover {
-  background: #e6afe4;
+  background: #9fb9c9;
 }
 .card-container{
   max-width: 80%;
@@ -86,11 +86,13 @@ span {
 }
 .card{
   flex: 1;
-  background-color: rgb(246, 231, 218);
-  box-shadow: 5px 5px 5px rgb(229, 190, 237),5px -5px 5px rgb(243, 207, 234),5px 5px 5px rgb(220, 170, 217),-5px 5px 5px rgb(31, 31, 31);
+  background-color: rgb(178,178,190);
+  box-shadow: 5px 5px 5px rgb(135, 179, 202),5px -5px 5px rgb(106, 165, 182),5px 5px 5px rgb(131, 189, 193),-5px 5px 5px rgb(111, 170, 181);
   overflow: hidden;
   transition: transform 0.3 ease-in-out;
   border-radius: 10px;
+  
+
 }
 .card:hover{
   transform: scale(1.05);
@@ -98,6 +100,7 @@ span {
 .card img{
   width: 100%;
   height: auto;
+
 }
 card-content{
   padding: 20px;
@@ -115,13 +118,13 @@ line-height: 1.6;
 .features{
   font-size: 70px;
   text-align: center;
-  font-weight: 200;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
   
   .footer{
-  background:#cbabc6;
+  background:#000;
   padding:30px 0px;
   font-family: 'Play', sans-serif;
   text-align:center;
@@ -173,7 +176,7 @@ line-height: 1.6;
     
   
  nav {
-    background-color: rgb(193,159,190);
+    background-color: rgb(86, 125, 139);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,8 +184,8 @@ line-height: 1.6;
 }
 
 nav h2 {
-    color: rgb(15, 10, 10);
-    font-size: 1.5rem;
+    color: white;
+    font-size: 1.9rem;
 }
 
 nav ul li {
@@ -192,8 +195,8 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1rem;
-    color: rgb(11, 6, 6);
+    font-size: 1.3rem;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
