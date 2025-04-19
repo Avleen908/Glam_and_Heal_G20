@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e6e6fa, #d8bfd8, #231753, #598699, #606f85);
+    background: linear-gradient(135deg, #e6e6fa, #d8bfd8, #8a74e0, #598699, #606f85);
     background-size: 400% 400%;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
@@ -22,12 +22,12 @@ body::after {
     width: 100%; 
     height: 100%;
     background: transparent;
-    z-index: -1; /* Places the stars behind content */
+    z-index: -1; 
     pointer-events: none;
     box-shadow:
-        100px 200px 5px 2px rgba(255, 255, 255, 0.8),
-        150px 300px 8px 2px rgba(255, 255, 255, 0.9),
-        200px 400px 6px 2px rgba(255, 255, 255, 0.9),
+        100px 200px 5px 2px rgba(235, 178, 178, 0.8),
+        150px 300px 8px 2px rgba(227, 181, 181, 0.9),
+        200px 400px 6px 2px rgba(252, 208, 208, 0.9),
         300px 500px 7px 3px rgba(255, 255, 255, 0.9),
         500px 600px 5px 3px rgba(255, 255, 255, 0.8),
         600px 100px 7px 2px rgba(255, 255, 255, 0.9),
@@ -41,8 +41,8 @@ body::after {
 @keyframes starTwinkle {
     0% {
         box-shadow:
-            100px 200px 5px 2px rgba(255, 255, 255, 0.4),
-            150px 300px 8px 2px rgba(255, 255, 255, 0.5),
+            100px 200px 5px 2px rgba(237, 129, 217, 0.4),
+            150px 300px 8px 2px rgba(227, 146, 229, 0.5),
             200px 400px 6px 2px rgba(255, 255, 255, 0.6),
             300px 500px 7px 3px rgba(255, 255, 255, 0.7),
             500px 600px 5px 3px rgba(255, 255, 255, 0.4),
@@ -127,11 +127,52 @@ p.subtitle {
     font-size: 1rem;
     transition: 0.4s ease;
     animation: buttonGlow 3s ease-in-out infinite, fadeIn 2s ease forwards;
+    position: relative;
 }
 
+/* Payment Button Hover Effect */
 .pay-btn:hover {
     background-color: #5a6f77;
     transform: scale(1.07);
+}
+
+/* Payment Button Loading State */
+.pay-btn.loading {
+    pointer-events: none;
+    background-color: #7b7d8f;
+    color: transparent;
+}
+
+.pay-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spinLoader 1s linear infinite;
+}
+
+/* Payment Button Success State */
+.pay-btn.success {
+    background-color: #57b773;
+    color: white;
+    pointer-events: none;
+}
+
+.pay-btn.success::after {
+    content: '✔';
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: scalePop 0.5s ease forwards;
 }
 
 p.footer-line {
@@ -170,18 +211,24 @@ p.footer-line {
 }
 
 @keyframes buttonGlow {
-    0% {
-        box-shadow: 0 0 10px #92d8db, 0 0 20px #ccf5ff;
-    }
-    50% {
-        box-shadow: 0 0 20px #7ca1c4, 0 0 30px #6989a4;
-    }
-    100% {
-        box-shadow: 0 0 10px #51616c, 0 0 20px #7a96a8;
-    }
+    0% { box-shadow: 0 0 10px #92d8db, 0 0 20px #ccf5ff; }
+    50% { box-shadow: 0 0 20px #7ca1c4, 0 0 30px #6989a4; }
+    100% { box-shadow: 0 0 10px #51616c, 0 0 20px #7a96a8; }
 }
 
 @keyframes floatSoft {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-12px); }
+}
+
+/* New: Payment Loader Spinner Animation */
+@keyframes spinLoader {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* New: Payment Success Tick Animation */
+@keyframes scalePop {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
