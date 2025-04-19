@@ -73,8 +73,10 @@ body::after {
     box-shadow: 0 0 40px rgba(102, 138, 156, 0.4);
     text-align: center;
     animation: fadeIn 1.5s ease, floatSoft 8s ease-in-out infinite;
-    width: 100%;
-    max-width: 400px;
+
+    /* ✅ Updated width styles */
+    width: 90vw;
+    max-width: none;
     z-index: 1;
 }
 
@@ -98,18 +100,14 @@ p.subtitle {
     animation: fadeIn 2.5s ease forwards;
 }
 
-.payment-form label {
-    text-align: left;
-    color: #151a1b;
-    font-weight: bold;
-}
-
+/* Make inputs stretch to fill horizontally */
 .payment-form input {
     padding: 12px;
     border: 2px solid #aaeff9;
     border-radius: 12px;
     outline: none;
     transition: 0.3s;
+    width: 100%; /* ✅ Make inputs stretch */
 }
 
 .payment-form input:focus {
@@ -128,48 +126,33 @@ p.subtitle {
     transition: 0.4s ease;
     animation: buttonGlow 3s ease-in-out infinite, fadeIn 2s ease forwards;
     position: relative;
+    width: 100%; /* ✅ Make button stretch */
 }
 
-/* Payment Button Hover Effect */
-.pay-btn:hover {
-    background-color: #5a6f77;
-    transform: scale(1.07);
-}
-
-/* Payment Button Loading State */
-.pay-btn.loading {
-    pointer-events: none;
-    background-color: #7b7d8f;
-    color: transparent;
-}
-
+/* Hover and states... */
+.pay-btn:hover { background-color: #5a6f77; transform: scale(1.07); }
+.pay-btn.loading { pointer-events: none; background-color: #7b7d8f; color: transparent; }
 .pay-btn.loading::after {
     content: '';
     position: absolute;
-    top: 50%; 
-    left: 50%;
-    width: 24px;
-    height: 24px;
+    top: 50%; left: 50%;
+    width: 24px; height: 24px;
     border: 3px solid #ffffff;
     border-top-color: transparent;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     animation: spinLoader 1s linear infinite;
 }
-
-/* Payment Button Success State */
 .pay-btn.success {
     background-color: #57b773;
     color: white;
     pointer-events: none;
 }
-
 .pay-btn.success::after {
     content: '✔';
     font-size: 1.4rem;
     position: absolute;
-    top: 50%; 
-    left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     animation: scalePop 0.5s ease forwards;
@@ -182,53 +165,12 @@ p.footer-line {
     animation: fadeIn 3s ease forwards;
 }
 
-/* Animations */
-@keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes popUp {
-    0% { transform: scale(0.8); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-@keyframes sparklePulse {
-    0% {
-        text-shadow: 0 0 5px #f3d9ff, 0 0 10px #e6ccff;
-        transform: scale(1);
-    }
-    100% {
-        text-shadow: 0 0 20px #ffb3ff, 0 0 40px #d76aff;
-        transform: scale(1.05);
-    }
-}
-
-@keyframes buttonGlow {
-    0% { box-shadow: 0 0 10px #92d8db, 0 0 20px #ccf5ff; }
-    50% { box-shadow: 0 0 20px #7ca1c4, 0 0 30px #6989a4; }
-    100% { box-shadow: 0 0 10px #51616c, 0 0 20px #7a96a8; }
-}
-
-@keyframes floatSoft {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-}
-
-/* New: Payment Loader Spinner Animation */
-@keyframes spinLoader {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* New: Payment Success Tick Animation */
-@keyframes scalePop {
-    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
-    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-}
+/* Animations unchanged */
+@keyframes gradientFlow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes popUp { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes sparklePulse { 0% { text-shadow: 0 0 5px #f3d9ff, 0 0 10px #e6ccff; transform: scale(1); } 100% { text-shadow: 0 0 20px #ffb3ff, 0 0 40px #d76aff; transform: scale(1.05); } }
+@keyframes buttonGlow { 0% { box-shadow: 0 0 10px #92d8db, 0 0 20px #ccf5ff; } 50% { box-shadow: 0 0 20px #7ca1c4, 0 0 30px #6989a4; } 100% { box-shadow: 0 0 10px #51616c, 0 0 20px #7a96a8; } }
+@keyframes floatSoft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes spinLoader { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes scalePop { 0% { transform: translate(-50%, -50%) scale(0); opacity: 0; } 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } }
