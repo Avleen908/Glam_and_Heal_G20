@@ -6,10 +6,14 @@
     <title>Payment Portal</title>
     <link rel="stylesheet" href="payment.css">
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ffe6f2, #f3d1ff, #d9b3ff, #ffd9ec);
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #fef2f4, #f6e7fb, #efeaf1, #f9f1f3);
             background-size: 400% 400%;
             font-family: 'Comic Sans MS', cursive, sans-serif;
             display: flex;
@@ -37,87 +41,83 @@
             background-size: 50px 50px;
         }
 
-        @keyframes heartFloat {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 1000px; }
-        }
-
         .payment-container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px 60px;
-            border-radius: 30px;
-            box-shadow: 0 0 30px rgba(255, 182, 193, 0.5);
+            background: rgba(255, 255, 255, 0.97);
+            padding: 50px 70px;
+            border-radius: 35px;
+            box-shadow: 0 0 40px rgba(157, 139, 176, 0.35);
             text-align: center;
             animation: fadeIn 1.5s ease, floatSoft 8s ease-in-out infinite;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             z-index: 1;
         }
 
         h1.title {
-            color: #c94fc9;
-            margin-bottom: 12px;
-            font-size: 2.3rem;
+            color: #9e8fae;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
             animation: popUp 1s ease forwards, sparklePulse 2s infinite alternate;
         }
 
         p.subtitle {
-            color: #856686;
-            margin-bottom: 25px;
+            color: #a195ad;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
             animation: fadeIn 2s ease forwards;
         }
 
         .payment-form {
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 16px;
             animation: fadeIn 2.5s ease forwards;
         }
 
         .payment-form label {
             text-align: left;
-            color: #993399;
+            color: #8b7d99;
             font-weight: bold;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
         .payment-form input {
-            padding: 12px;
-            border: 2px solid #eab5e1;
-            border-radius: 12px;
+            padding: 14px;
+            border: 2px solid #c4b2cc;
+            border-radius: 14px;
             outline: none;
             transition: 0.4s ease;
-            background: #fff7fb;
-            font-size: 0.95rem;
+            background: #fff8fc;
+            font-size: 1rem;
         }
 
         .payment-form input:focus {
-            border-color: #cc66cc;
-            box-shadow: 0 0 12px #ffccff;
-            background: #fff0fa;
+            border-color: #b38eb5;
+            box-shadow: 0 0 14px #e7c9eb;
+            background: #fff0f9;
         }
 
         .pay-btn {
-            background-color: #e75480;
+            background-color: #c89cc9;
             color: white;
             border: none;
             border-radius: 50px;
-            padding: 14px;
+            padding: 15px;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: 0.4s ease;
             animation: buttonGlow 3s ease-in-out infinite, fadeIn 2s ease forwards;
             position: relative;
         }
 
         .pay-btn:hover {
-            background-color: #d14776;
+            background-color: #a77cab;
             transform: scale(1.07);
         }
 
         .pay-btn.loading {
             pointer-events: none;
-            background-color: #cc4c74;
+            background-color: #a88faa;
             color: transparent;
         }
 
@@ -143,7 +143,7 @@
 
         .pay-btn.success::after {
             content: '✔';
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             position: absolute;
             top: 50%; 
             left: 50%;
@@ -153,9 +153,9 @@
         }
 
         p.footer-line {
-            margin-top: 25px;
+            margin-top: 30px;
             font-size: 0.9rem;
-            color: #da7fb4;
+            color: #867c8f;
             animation: fadeIn 3s ease forwards;
         }
 
@@ -163,6 +163,11 @@
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        @keyframes heartFloat {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 1000px; }
         }
 
         @keyframes fadeIn {
@@ -176,19 +181,19 @@
         }
 
         @keyframes sparklePulse {
-            0% { text-shadow: 0 0 5px #ff99ff, 0 0 10px #ffccff; transform: scale(1); }
-            100% { text-shadow: 0 0 20px #ff66ff, 0 0 40px #ff33cc; transform: scale(1.05); }
+            0% { text-shadow: 0 0 5px #ffccff, 0 0 10px #e6c9eb; transform: scale(1); }
+            100% { text-shadow: 0 0 20px #e9d6ee, 0 0 40px #cab6d6; transform: scale(1.05); }
         }
 
         @keyframes buttonGlow {
-            0% { box-shadow: 0 0 10px #ffc0cb, 0 0 20px #ffb6c1; }
-            50% { box-shadow: 0 0 20px #ff69b4, 0 0 30px #ff1493; }
-            100% { box-shadow: 0 0 10px #ffa6c9, 0 0 20px #f08080; }
+            0% { box-shadow: 0 0 10px #ffd9ec, 0 0 20px #eec6f3; }
+            50% { box-shadow: 0 0 20px #e7a8e1, 0 0 30px #b59dc4; }
+            100% { box-shadow: 0 0 10px #dba2cf, 0 0 20px #f0b3df; }
         }
 
         @keyframes floatSoft {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
+            50% { transform: translateY(-14px); }
         }
 
         @keyframes spinLoader {
