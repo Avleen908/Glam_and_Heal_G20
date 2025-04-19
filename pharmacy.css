@@ -52,7 +52,7 @@ nav ul li a:hover {
   align-items: center;
   height: 100vh;
   width: 100%;
-  padding: 20px ;
+  padding: 20px;
   background-image: linear-gradient(to right top, #f0a6d9, #d1b0f3, #a6bcff, #78c7ff, #55cef0);
 }
 
@@ -68,8 +68,17 @@ nav ul li a:hover {
 .pic {
   height: 400px;
   width: 450px;
-  border-radius: 12px;
+  border-radius: 25px;
   box-shadow: 10px 10px 5px rgb(28, 28, 29);
+  overflow: hidden;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
 }
 
 .text {
@@ -136,23 +145,21 @@ footer p {
 /* Product Card Styles */
 .product-grid {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   padding: 2rem;
-  scroll-snap-type: x mandatory;
 }
 
 .product-card {
-  flex: 0 0 auto;
-  width: 200px;
+  width: 300px;
   background: #fce4ec;
   border: 1px solid black;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0;
   text-align: center;
   transition: transform 0.3s ease;
-  scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .product-card:hover {
@@ -161,14 +168,14 @@ footer p {
 
 .product-card img {
   width: 100%;
-  height: 120px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.8rem;
+  border-radius: 12px 12px 0 0;
 }
 
+
 .product-card h3 {
-  margin: 0.2rem 0;
+  margin: 0.5rem 0 0.2rem;
   font-size: 1rem;
   color: #333;
 }
@@ -179,29 +186,27 @@ footer p {
   color: #e91e63;
 }
 
-.tag-popular {
-  display: inline-block;
-  margin-top: 0.4rem;
-  padding: 2px 8px;
-  font-size: 0.8rem;
-  color: white;
-  background-color: #ab47bc;
-  border-radius: 12px;
-}
+.tag-popular,
 .tag-discount {
   display: inline-block;
-  background-color: #52a3ff;
-  color: white;
+  margin-top: 0.4rem;
   padding: 4px 10px;
   font-size: 0.75rem;
   font-weight: bold;
+  color: white;
   border-radius: 10px;
-  margin-top: 5px;
 }
 
+.tag-popular {
+  background-color: #ab47bc;
+}
+
+.tag-discount {
+  background-color: #52a3ff;
+}
 
 .add-cart {
-  margin-top: 10px;
+  margin: 10px 0 15px;
   background-color: #4070f4;
   color: white;
   border: none;
@@ -215,4 +220,3 @@ footer p {
 .add-cart:hover {
   background-color: #000;
 }
-
