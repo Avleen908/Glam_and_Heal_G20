@@ -1,36 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
-    <link rel="stylesheet" href="payment.css"> <!-- Make sure this matches your CSS file name -->
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="welcome.css" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a><img src="logo.jpeg"><span>glam & heal</span></a>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li> <a href ="payment.html"> Checkout</a></li>
+      </ul>
+      <div class="nav__btns">
+        <a href="login3.html"><button class="btn">Login</button></a>
+      </div>
+    </nav>
+    <header class="section__container header__container">
+      <div class="header__image">
+        <img src="https://aromantic.co.uk/cdn/shop/articles/5-homemade-skin-care-recipes-with-all-natural-ingredients-870313.jpg?v=1740409987" alt="header" />
+      </div>
+      <div class="header__content">
+        <h2>Unwrap the best of Glam, Skincare, and More -- Happy Shopping</h2>
+        <h1>With Glam & Heal</h1>
+      </div>
+    </header>
 
-    <div class="payment-container">
-        <h1 class="title"> Payment Portal  </h1>
+    <!-- 4 Images with Hover Effect -->
+    <section class="image-gallery">
+      <div class="image-item">
+        <img src="C:\Users\tanvi\OneDrive\Pictures\Screenshots\Screenshot 2025-04-08 131554.png"alt="Image 1" />
+        <div class="image-overlay">
+          <h3>pharmacy</h3>
+          <p>better health starts with right skincare</p>
+        </div>
+      </div>
+      <div class="image-item">
+        <img src="c:\Users\tanvi\OneDrive\Pictures\Screenshots\Screenshot 2025-04-08 131757.png" alt="Image 2" />
+        <div class="image-overlay">
+          <h3>Skincare Essentials</h3>
+          <p>Find your perfect skincare match.</p>
+        </div>
+      </div>
+      <div class="image-item">
+        <img src="c:\Users\tanvi\OneDrive\Pictures\Screenshots\Screenshot 2025-04-08 131938.png" alt="Image 3" />
+        <div class="image-overlay">
+          <h3>pet care</h3>
+          <p>find the best items for your pet</p>
+        </div>
+      </div>
+      <div class="image-item">
+        <img src="c:\Users\tanvi\OneDrive\Pictures\Screenshots\Screenshot 2025-04-08 132121.png" alt="Image 4" />
+        <div class="image-overlay">
+          <h4>other categories</h4>
+          <p>find latest items</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="footer-top"></div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h1 class="footer-heading">Glam & Heal</h1>
+        </div>
+        <div class="footer-section">
+          <ul class="d-footer-ul">
+            <li class="d-footer-li-h"><b>Links</b></li>
+            <li class="d-footer-li"><a href="welcome.html">Home</a></li>
+            <li class="d-footer-li"><a href="about.html">About Us</a></li>
         
-        <p class="subtitle">Complete your magical transaction</p>
-
-        <form class="payment-form">
-            <label for="cardNumber">Card Number</label>
-            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
-
-            <label for="cardName">Cardholder Name</label>
-            <input type="text" id="cardName" placeholder="Your Name">
-
-            <label for="expiry">Expiry Date</label>
-            <input type="text" id="expiry" placeholder="MM/YY">
-
-            <label for="cvv">CVV</label>
-            <input type="password" id="cvv" placeholder="***">
-
-            <button type="submit" class="pay-btn">Pay Now</button>
-        </form>
-
-        <p class="footer-line"> Secure and Sparkly Checkout </p>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul class="d-footer-ul">
+            <li class="d-footer-li-h"><b><a href="about.html">About Us</a></b></li>
+            <li class="d-footer-li"><a href="contact.html">Contact Us</a></li>
+            <li class="d-footer-li"><a href="pharmacy.html">pharmacy</a></li>
+            <li class="d-footer-li"><a href="skincare.html">skincare</a></li>
+            <li class="d-footer-li"><a href="petcare.html">petcare</a></li>
+            <li class="d-footer-li"><a href="otheresseentials.html">other Essentials</a></li>
+            <li class="d-footer-li"><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <ul class="d-footer-ul">
+            <li class="d-footer-li-h"><b>Privacy policy</b></li>
+            <li class="d-footer-li-h"><b><a href="contact.html">Contact Us</a></b></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <div class="logo-head"><b>Follow us on</b></div>
+          <div class="logo">
+            <a href="#" target="_blank"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/100/instagram-new.png" alt="instagram-new" /></a>
+            <a href="#" target="_blank"><img width="30" height="30" src="https://img.icons8.com/ios-filled/100/youtube-squared.png" alt="youtube-squared" /></a>
+            <a href="#" target="_blank"><img width="50" height="50" src="—Pngtree—email icon design_5571212.png" alt="dribbble" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-sec">
+        <p>©️ 2024 Glam & Heal Inc. All rights are reserved</p>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
