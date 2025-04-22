@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-image: linear-gradient(to right top, #353537, #bfc9ce, #8ceffc, #755f7c, #ba9dc3);
+  background-image: linear-gradient(to right top, #e6e6ec, #bfc9ce, #e6aced, #dfd2e3, #ba9dc3);
 }
 
 .container {
