@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: linear-gradient(to right top, #353537, #bfc9ce, #8ceffc, #755f7c, #ba9dc3);
 }
 
 .container {
@@ -86,7 +86,7 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0.5;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #b5bbb8, #bfc5b4);
 }
 
 .cover .text .text-1,
@@ -135,7 +135,7 @@ body {
   bottom: 0;
   height: 3px;
   width: 25px;
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: linear-gradient(to right top, #051937, #004d7a, #e0ebec, #e0ede8, #ecc7e3);
 }
 
 .forms .signup-form .title:before {
@@ -207,7 +207,7 @@ body {
 }
 
 .forms .form-content .button input:hover {
-    background-image: linear-gradient(to right top, #7c88e3, #00a9fa, #00c2e9, #00d4b7, #70dd7c);
+    background-image: linear-gradient(to right top, #7c88e3, #00a9fa, #00c2e9, #00d4b7, #cedfd0);
 }
 
 .forms .form-content label {
