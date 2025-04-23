@@ -565,3 +565,7 @@ nav {
 
   
 }
+
+.pointer-hover:hover {
+  cursor: pointer;
+}
