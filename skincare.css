@@ -108,6 +108,7 @@ nav ul li a:hover {
 }
 
 /* Product Section */
+/* Product Section */
 .features {
   font-size: 70px;
   text-align: center;
@@ -126,61 +127,63 @@ nav ul li a:hover {
 }
 
 .card {
-  background-color: rgb(178, 178, 190);
-  box-shadow: 5px 5px 5px rgb(135, 179, 202),
-              5px -5px 5px rgb(106, 165, 182),
-              5px 5px 5px rgb(131, 189, 193),
-              -5px 5px 5px rgb(111, 170, 181);
+  background-color: #fce4ec; /* Soft pink background for a fresher look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 
+              0 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+  border-radius: 16px; /* More rounded corners */
   flex: 1 1 calc(33.333% - 40px);
   max-width: calc(33.333% - 40px);
+  text-align: center; /* Center content inside card */
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly increased hover effect */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  border-radius: 16px 16px 0 0; /* Rounded top corners for images */
 }
 
 .card-content {
   padding: 20px;
-  text-align: center;
 }
 
 .card-content h2 {
-  color: black;
-  font-size: 18px;
-  line-height: 1.6;
+  color: #333; /* Darker text for readability */
+  font-size: 1.1rem; /* Slightly larger font */
+  font-weight: 500;
   margin-bottom: 10px;
 }
+
 .card-content .price {
-  font-size: 18px;
-  color: #2e2e2e;
+  font-size: 1.2rem;
+  color: #e91e63; /* Price in pink to highlight */
   font-weight: bold;
   margin: 10px 0;
 }
 
-
 .card-content button {
-  padding: 10px 20px;
-  background-color: #4070f4;
+  padding: 12px 24px; /* Slightly larger button padding */
+  background-color: #4070f4; /* Consistent brand color */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; /* Rounded button */
   cursor: pointer;
-  transition: background 0.3s;
+  font-size: 1rem; /* Standard font size for button */
+  transition: background-color 0.3s ease;
 }
 
 .card-content button:hover {
-  background-color: #305ecb;
+  background-color: #305ecb; /* Darker blue on hover */
 }
 
+/* Responsiveness */
 @media screen and (max-width: 992px) {
   .card {
     flex: 1 1 calc(50% - 40px);
@@ -194,9 +197,15 @@ nav ul li a:hover {
     max-width: 100%;
   }
 
+  .features {
+    font-size: 50px;
+  }
+
   .text h2 {
     font-size: 50px;
   }
+}
+
 
   .features {
     font-size: 50px;
