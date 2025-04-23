@@ -75,14 +75,14 @@ nav ul li a:hover {
 }
 
 .text h2 {
-  color: #6a93a5;
+  color: #333; /* Updated color to a darker shade for better contrast */
   font-size: 90px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .text h5 {
-  color: #7096a4;
+  color: #333; /* Updated color to a darker shade */
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -106,8 +106,6 @@ nav ul li a:hover {
 .hire:hover {
   background: #9fb9c9;
 }
-
-/* Product Section */
 /* Product Section */
 .features {
   font-size: 70px;
