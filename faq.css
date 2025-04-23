@@ -32,7 +32,7 @@
     }
     
     body {
-      background-image: linear-gradient(to right bottom, #4ca9df, #4ebfd8, #78d1cb, #aae0c3, #d9ecc7);
+      background-image: linear-gradient(to right bottom, #e2c5e3, #ecc1ee, #d5dbdb, #dce9e2, #d9ecc7);
         font-family: var(--font-family);
         color: var(--color-text);
         font-size: var(--fs-md);

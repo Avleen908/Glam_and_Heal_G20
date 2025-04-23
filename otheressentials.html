@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glam & Heal Pharmacy</title>
+  <link rel="stylesheet" href="otheressentials.css" />
+</head>
+<body>
+  <nav>
+    <h2>Glam & Heal</h2>
+    <ul>
+      <li><a href="welcome.html">Home</a></li>
+      <li><a href="about.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-us">
+    <div class="about">
+      <div class="pic">
+        <img src="c:\Users\tanvi\Downloads\otheressentials.jpeg" alt="About Us" />
+      </div>
+      <div class="text">
+        <h2>Other Essentials</h2>
+        <h5>"You can explore other categories of things"</h5>
+        <div class="data">
+          <a href="#" class="hire">Explore</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr />
+  <h2 class="features">Products</h2>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="c:\Users\tanvi\Downloads\sunglasses.webp" alt="sunglasses">
+      <h3>Sunglasses</h3>
+      <p class="price">₹625.00</p>
+      <span class="tag-popular">Popular</span>
+      <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="c:\Users\tanvi\Downloads\onemore.webp" alt="hand Bag">
+      <h3>Hand Bag</h3>
+      <p class="price">₹435.00</p>
+      <span class="tag-discount">2% off!</span>
+      <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="c:\Users\tanvi\Downloads\stationerset.webp" alt="Stationerset">
+      <h3>Stationerset</h3>
+      <p class="price">₹40.00</p>
+      <span class="tag-popular">Popular</span>
+      <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="c:\Users\tanvi\Downloads\tro.webp" alt="Trolley Set">
+      <h3>Trolley Set</h3>
+      <p class="price">₹1250.00</p>
+      <span class="tag-discount">2% off!</span>
+      <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="c:\Users\tanvi\Downloads\one.webp" alt="Black Dream catcher">
+      <h3>Black Dream catcher</h3>
+      <p class="price">₹145.00</p>
+      <span class="tag-popular">Popular</span>
+      <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="c:\Users\tanvi\Downloads\keychain.jpeg" alt="Keychain">
+      <h3>Keychain</h3>
+      <p class="price">₹80.00</p>
+      <span class="tag-discount">2% off!</span>
+      <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+      <button class="add-cart">Add to Cart</button>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+          <img src="c:\Users\tanvi\Downloads\all.jpeg" alt="Wall hangings">
+          <h3>Wall hangings</h3>
+          <p class="price">₹590.00</p>
+          <span class="tag-popular">Popular</span>
+          <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+          <button class="add-cart">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="c:\Users\tanvi\Downloads\lights.webp" alt="Leave Fairy Lights">
+            <h3>Leave Fairy Lights</h3>
+            <p class="price">₹225.00</p>
+            <span class="tag-discount">2% off!</span>
+            <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+            <button class="add-cart">Add to Cart</button>
+           
+            
+            <script>
+              let count = 0;
+            
+              function increaseQty() {
+                count++;
+                document.getElementById("quantity").textContent = count;
+              }
+            </script>
+            
+
+          </div>
+
+          <div class="product-card">
+            <img src="c:\Users\tanvi\Downloads\phone cases.jpg" alt="Phone Cases(Silicon)">
+            <h3>Phone Cases(Silicon)</h3>
+            <p class="price">₹435.00</p>
+            <span class="tag-discount">2% off!</span>
+            <button onclick="increaseQty()">+</button>
+            <span id="quantity">0</span>
+            <button class="add-cart">Add to Cart</button>
+          </div>
+
+    
+
+  </div>
+
+  
+  <footer>
+    <p>&copy; 2024 Glam & Heal. All rights reserved.</p>
+  </footer>
+</body>
+</html>
